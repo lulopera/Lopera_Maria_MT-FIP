@@ -1,3 +1,14 @@
+@charset "UTF-8";
+
+@font-face
+{
+    font-family: 'montserratregular';
+    src: url('../fonts/montserrat-regular-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .hidden
 {
 	display: none;
@@ -5,7 +16,7 @@
 
 body
 {
-	font-family: "Montserrat", Helvetica, sans-serif;
+	font-family: 'montserratregular', Helvetica, sans-serif;
 	font-weight: 400;
 	font-size: 14px;
 	color: #707070;
@@ -14,7 +25,7 @@ body
 
 h2, h3
 {
-	font-family: "Montserrat", Times, serif;
+	font-family: 'montserratregular', Times, serif;
 }
 
 p
@@ -38,7 +49,7 @@ a
 #mainHeader
 {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	height: 450px;
 	background: url('../images/wallpaper-green-steeringwheel.jpg') no-repeat;
 	margin-top: 30px;
@@ -51,18 +62,147 @@ a
 	left: 65%;
 }
 
-#mainHeader p
+#mainHeader p 
 {
-	position:absolute;
+	position: absolute;
 	top: 60%;
-	left: 65%;
+	left: 70%;
 	font-size: 24px;
 	color: #ecc33d;
 	width: 300px;
 	height: 50px;
-	margin-top: 10px;
+	margin-top: 20px;
 	line-height: 30px;
 }
+
+#mainNav
+{
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	margin-left: 30px;
+}
+
+#mainNav ul li a
+{
+	margin-left: 20px;
+	display: block;
+	color: #ecc33d;
+	font-size: 24px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+}
+
+#mainNav ul li a:hover
+{
+	color: white;
+	transition: all .3s ease-in-out;
+	
+}
+
+#mainNav ul li a:first-letter
+{
+	font-family: "carlsberg";
+	font-size: 36px;
+	color: #a8c735;
+}
+
+#mainFooter
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	margin-top: 50px;
+	background-color: #a8c735;
+	height: 200px;
+}
+
+#footerNav ul
+{
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	margin-left: 40px;
+}
+
+#footerNav ul li a
+{
+	display: block;
+	width: 150px;
+	color: #707070;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 15px;
+	transition: all .3s ease-in-out;
+	margin-left: 20px;
+}
+
+#footerNav ul li a:hover
+{
+	color: white;
+	transition: all .3s ease-in-out;
+}
+
+#secondNav ul
+{
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-left: 40px;
+}
+
+#secondNav ul li a
+{
+	display: block;
+	width: 150px;
+	color: #707070;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 15px;
+	transition: all .3s ease-in-out;
+	margin-left: 300px;
+}
+
+#secondNav ul li a:hover
+{
+	color: white;
+	transition: all .3s ease-in-out;
+}
+
+#mainFooter p
+{
+	font-family: "carlsberg", Helvetica, sans-serif;
+	font-size: 20px;
+	margin-top: 100px;
+	margin-left: 200px;
+}
+
+
+
+/*Home-page*/
+
+#dynamicLogo
+{
+	width: 1170px;
+	margin-top: 50px;
+}
+
+#logoWheel
+{
+	animation: 7s linear 1s infinite alternate slidein;
+	position: relative;
+	animation-direction: alternate-reverse;		
+}
+
+@keyframes slidein
+{
+  0% {left:0px; right:1000px;}
+  100% {left: 1000px; right:0px;}
+}
+
+
 
 #promo
 {
@@ -91,67 +231,21 @@ a
 	color: #022d04;
 }
 
-#mainFooter
+/*AboutUs-page*/
+
+#ourHistory
 {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
+	display: block;
 	margin-top: 50px;
-	background-color: #a8c735;
-	height: 200px;
+	width: 1000px;
+	height: 500px;
+	margin-left: 88px;
+
 }
 
-#footerNav ul
-{
-	margin-top: 20px;
-	display: flex;
-	flex-direction: column;
-	/*justify-content: flex-start;*/
-	margin-left: 40px;
-}
 
-#footerNav ul li a
-{
-	display: block;
-	width: 150px;
-	color: #707070;;
-	/*text-align: center;*/
-	padding-top: 10px;
-	padding-bottom: 10px;
-	border-radius: 15px;
-	transition: all .3s ease-in-out;
-	margin-left: 20px;
-}
 
-#secondNav ul
-{
-	margin-top: 20px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	margin-left: 40px;
-}
-
-#secondNav ul li a
-{
-	display: block;
-	width: 150px;
-	color: #707070;;
-	/*text-align: center;*/
-	padding-top: 10px;
-	padding-bottom: 10px;
-	border-radius: 15px;
-	transition: all .3s ease-in-out;
-	margin-left: 300px;
-}
-
-#mainFooter p
-{
-	font-family: "carlsberg", Helvetica, sans-serif;
-	font-size: 20px;
-	margin-top: 100px;
-	margin-left: 200px;
-}
+/*Products-page*/
 
 #products
 {
@@ -184,3 +278,156 @@ a
 	background-color: #af1c27;
 }
 
+
+
+/*Advertisement-page*/
+
+#sponsor
+{
+	margin-top: 30px;
+}
+
+#bicycle
+{
+	animation: 7s linear 1s infinite alternate slidein;
+	position: relative;
+	animation-direction: alternate-reverse;		
+}
+
+@keyframes slidein
+{
+  0% {left:0px; right:1000px;}
+  100% {left: 1000px; right:0px;}
+}
+
+
+#contactArea
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	margin-top: 50px;
+	
+
+}
+
+#companyInfo
+{
+
+	background: url('../images/diana-oldspice.jpg') no-repeat;
+	width: 540px;
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+#companyInfo p
+{
+	margin-top: 200px;
+	font-size: 16px;
+	margin-left: 10px;
+	width: 200px;
+	font-weight: 600;
+}
+
+#socialMenu
+{
+	height: 45px;
+	margin-top: 15px;
+	margin-right: 70px;
+	margin-left: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+
+}
+
+#iconNav img
+{
+	width: 30px;
+	height: 30px;
+}
+
+#iconNav
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#iconNav li
+{
+	display: inline;
+	margin-right: 10px;
+}
+
+#iconNav li a
+{
+	filter: grayscale(100%);
+	transition: all .2s linear;
+	border-radius: 5px;
+}
+
+#iconNav li a:hover
+{
+	border-radius: 10px;
+	filter: saturate(200%);
+}
+
+#contactForm
+{
+	width: 570px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin-top: 40px;
+	margin-bottom: 60px;
+	margin-right: 30px;
+	margin-left: 50px;
+}
+
+#contactForm p
+{
+	font-size: 26px;
+	margin-bottom: 50px;
+}
+
+
+
+input, textarea
+{
+	width: 200px;
+	border: 1px solid #d1d1d1;
+	border-radius: 20px;
+	padding: 6px 15px 6px 35px;
+	background: url('../images/magnifying-glass-gray.svg')no-repeat #fcfcfc 8px 4px;
+	background-size: 20px;
+	box-shadow: 0 1px 3px rgba(0,0,0,.15) inset;
+	margin-top: 20px;
+	margin-left: 100px;
+}
+
+
+
+#submitInfo
+{
+	display: block;
+	width: 150px;
+	color: #fff;
+	text-align: center;
+	background: rgb(33,50,50);
+	background: linear-gradient(0deg, rgba(33,50,50,1) 0%, rgba(33, 84, 69, 1) 100%);
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-top: 40px;
+	margin-left: 150px;
+	transition: all .2s linear;
+	border-radius: 5px;
+}
+
+#submitInfo:hover
+{
+	border-radius: 10px;
+	filter: saturate(200%);
+}
